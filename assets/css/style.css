@@ -1,0 +1,301 @@
+:root{
+    --bg-image-position: -100;
+    --custom-orange: #F76500;
+    --custom-purple: #760BE6;
+    --footer-background: #282A3A;
+}
+
+.custom-font {
+    font-family: 'Inter', sans-serif;
+    color: #393939;
+    text-decoration: none;
+}
+
+.menu-link {
+    position: relative;
+}
+
+.menu-link::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #393939;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s;
+}
+
+.menu-link:hover {
+    color: #393939;
+}
+
+@media screen and (min-width: 768px) {
+
+    .menu-link:hover::before {
+        transform: scaleX(1);
+        transition: transform 0.35s;
+        transform-origin: left;
+    }
+}
+
+.glassmorphism {
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 4px 4px 0 rgba( 31, 38, 135, 0.25 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border: 1px solid #FFFFFF;
+}
+
+.higlight {
+    background-color: var(--custom-orange);
+    color: #FFFFFF;
+}
+
+.order-btn {
+    font-size: 1.5em;
+    background-color: var(--custom-purple);
+    color:#FFFFFF;
+}
+
+.partner-btn {
+    font-size: 1.5em;
+    background-color: var(--custom-orange);
+    color:#FFFFFF;
+}
+
+.custom-title {
+    font-size: 3em;
+}
+
+@media screen and (max-width: 368px) {
+    .custom-title {
+        font-size: 2em;
+    }
+ 
+}
+
+.logo-box {
+    display: flex;
+    width: 30%;
+    height: auto;
+}
+
+@media screen and (max-width: 576px) {
+    .logo-box{
+        width: 33%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .glassmorphism-logo {
+        background: rgba( 255, 255, 255, 0.3 );
+        box-shadow: 0 4px 4px 0 rgba( 31, 38, 135, 0.25 );
+        backdrop-filter: blur( 7px );
+        -webkit-backdrop-filter: blur( 7px );
+        border: 1px solid #FFFFFF;
+    }
+}
+
+.big-number {
+    font-size: 6em;
+}
+
+@media screen and (max-width: 885px) {
+    .big-number {
+        font-size: 5.5em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .big-number {
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .big-number {
+        font-size: 4em;
+    } 
+}
+
+
+.background-img {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: var(--bg-image-position);
+}
+
+.channel-card {
+    background: rgba( 255, 255, 255, 0.3 );
+    border-radius: 1.5em;
+    border: 2px solid #FFFFFF;
+    box-shadow: -10px 20px 39px 8px rgba( 31, 38, 135, 0.25 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+}
+
+.no-link {
+    font-family: 'Inter', sans-serif;
+    color: #393939;
+    text-decoration: none;
+}
+
+.no-link:hover {
+    color: #393939;
+}
+
+.custom-footer {
+    background-color: var(--footer-background);
+    color: #FFFFFF;
+}
+
+.footer-link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #FFFFFF;
+}
+
+.footer-borders {
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+/*Форма входа и регистрации*/
+
+.form-background{
+    background-image: url(../images/pexels-bruno-thethe-1910225.jpg) ;
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+.form-wrapper{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);   
+  }
+  
+.form-wrapper{
+    color:#fff;
+  }
+
+.user-box {
+    position: relative;
+  }
+  
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+
+.user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+ .user-box input {
+    font-weight: bolder;
+    letter-spacing: 1px;
+  }
+  
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -25px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+    font-weight: none;
+    letter-spacing: 1px;
+  }
+  
+  .sub-btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 24px;
+	outline: none;
+	border: none;    
+	border-radius: 3px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+.sub-btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.sub-btn:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+.sub-btn:active {
+	background-color: #efefef !important;
+}
+
+.form-text {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    
+}
+
+.form-text a {
+    color: #FFFFFF;
+}
+
+.footer-link a:hover {
+    color: #FFFFFF;
+    
+}
+
+.err-text {
+    color: #ffe600;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.suc-text {
+    color: #09ff00;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.post {
+    border-radius: 8px;
+background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  10px 10px 32px #a6a6a6,
+             -10px -10px 32px #ffffff;
+}
